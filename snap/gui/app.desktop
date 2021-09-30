@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Script Launcher
+Comment=Monitor your device usage
+Exec=script-launcher.start-script
+Icon=${SNAP}/meta/gui/icon.png
+Terminal=false
+Categories=Development;

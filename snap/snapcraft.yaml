@@ -1,0 +1,32 @@
+name: script-launcher
+version: '1.0'
+base: core18
+summary: snap to launch a script at boot.
+description: |
+    using Ubuntu Core devices it is not always possible to access via SSH and it 
+    is not easy to autostart some process.
+      
+     
+confinement: strict
+
+apps:
+    
+    autostart-script:
+        command: bin/autostart.sh 
+        daemon: simple
+        restart-condition: never
+        plugs: [network, network-bind, mount-observe, network-observe, system-observe, bluetooth-control]
+
+
+    start-script:
+        command: bin/run.sh 
+        plugs: [network, network-bind, mount-observe, network-observe, system-observe, bluetooth-control,desktop]
+
+
+parts:
+   
+    shscripts:  
+        source: ./shscripts/
+        plugin: dump
+        organize:
+          '*': bin/ 
