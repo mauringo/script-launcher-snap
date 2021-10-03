@@ -11,7 +11,7 @@ The script launched is in the following folder:
     /var/snap/script-launcher/common
     
 
-It is pssible to prevent the script to be autostarted removing the file:
+It is possible to prevent the script to be autostarted removing the file:
    
     /var/snap/script-launcher/common/autostarton
     
@@ -24,7 +24,7 @@ Follow the commands. you may need multipass support.
 
 1 - git clone 
 
-2 - cd autosrtart-bluetooth-snap
+2 - cd inside the folder
 
 
 3 - snapcraft
